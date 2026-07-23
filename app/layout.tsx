@@ -209,7 +209,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Navbar />
 
           {/* Main page content */}
-          <main id="main-content">
+          <main id="main-content" className="pb-20 md:pb-0">
             {children}
           </main>
 

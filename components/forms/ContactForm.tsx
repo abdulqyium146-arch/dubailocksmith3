@@ -109,7 +109,7 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6" noValidate>
+    <form onSubmit={handleSubmit(onSubmit)} className="space-y-5 sm:space-y-4" noValidate>
       {/* Urgency selector */}
       <div>
         <label className="block text-sm font-semibold text-gray-700 mb-3">
@@ -150,7 +150,7 @@ export function ContactForm() {
             type="text"
             autoComplete="name"
             placeholder="Mohammed Al-Hassan"
-            className={`w-full px-4 py-3 rounded-xl border text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-500 transition ${
+            className={`w-full px-4 py-3 rounded-xl border text-base text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-500 transition ${
               errors.name ? 'border-emergency-500 bg-emergency-50' : 'border-gray-300 bg-white'
             }`}
             {...register('name')}
@@ -169,7 +169,7 @@ export function ContactForm() {
             type="tel"
             autoComplete="tel"
             placeholder="+971 50 000 0000"
-            className={`w-full px-4 py-3 rounded-xl border text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-500 transition ${
+            className={`w-full px-4 py-3 rounded-xl border text-base text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-500 transition ${
               errors.phone ? 'border-emergency-500 bg-emergency-50' : 'border-gray-300 bg-white'
             }`}
             {...register('phone')}
@@ -190,7 +190,7 @@ export function ContactForm() {
           type="email"
           autoComplete="email"
           placeholder="you@example.com"
-          className={`w-full px-4 py-3 rounded-xl border text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-500 transition ${
+          className={`w-full px-4 py-3 rounded-xl border text-base text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-500 transition ${
             errors.email ? 'border-emergency-500 bg-emergency-50' : 'border-gray-300 bg-white'
           }`}
           {...register('email')}
@@ -208,7 +208,7 @@ export function ContactForm() {
           </label>
           <select
             id="service"
-            className={`w-full px-4 py-3 rounded-xl border text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-brand-500 transition ${
+            className={`w-full px-4 py-3 rounded-xl border text-base text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-brand-500 transition ${
               errors.service ? 'border-emergency-500 bg-emergency-50' : 'border-gray-300'
             }`}
             {...register('service')}
@@ -231,7 +231,7 @@ export function ContactForm() {
           </label>
           <select
             id="area"
-            className={`w-full px-4 py-3 rounded-xl border text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-brand-500 transition ${
+            className={`w-full px-4 py-3 rounded-xl border text-base text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-brand-500 transition ${
               errors.area ? 'border-emergency-500 bg-emergency-50' : 'border-gray-300'
             }`}
             {...register('area')}
@@ -259,7 +259,7 @@ export function ContactForm() {
           id="message"
           rows={4}
           placeholder="Tell us what happened or what you need. The more detail you give, the more accurate our quote will be."
-          className={`w-full px-4 py-3 rounded-xl border text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-500 transition resize-y ${
+          className={`w-full px-4 py-3 rounded-xl border text-base text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-500 transition resize-y min-h-[120px] ${
             errors.message ? 'border-emergency-500 bg-emergency-50' : 'border-gray-300 bg-white'
           }`}
           {...register('message')}

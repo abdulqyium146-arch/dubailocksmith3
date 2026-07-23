@@ -72,7 +72,7 @@ function ReviewCard({ review, index }: { review: Review; index: number }) {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
-      className="shrink-0 w-[300px] sm:w-[320px] md:w-[340px]"
+      className="shrink-0 w-[280px] sm:w-[340px]"
     >
       <div className="h-full flex flex-col p-5 rounded-2xl bg-white dark:bg-navy-800 border border-gray-100 dark:border-white/8 shadow-sm hover:shadow-md transition-shadow duration-300">
         {/* Top row */}
@@ -224,8 +224,8 @@ export function ReviewsSection() {
 
           <motion.div
             ref={carouselRef}
-            className="flex gap-4 overflow-x-auto pb-4 px-4 md:px-8 scrollbar-hide cursor-grab active:cursor-grabbing"
-            style={{ x: dragX }}
+            className="flex gap-4 sm:gap-6 overflow-x-auto pb-4 px-4 md:px-8 scrollbar-hide cursor-grab active:cursor-grabbing"
+            style={{ x: dragX, touchAction: 'pan-y' }}
             drag="x"
             dragConstraints={carouselRef}
             whileTap={{ cursor: 'grabbing' }}

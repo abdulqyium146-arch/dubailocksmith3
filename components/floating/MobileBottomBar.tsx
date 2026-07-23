@@ -51,6 +51,7 @@ export function MobileBottomBar() {
           <motion.a
             href={`tel:${BUSINESS.phoneRaw}`}
             aria-label={`Call now: ${BUSINESS.phone}`}
+            style={{ touchAction: 'manipulation' }}
             className="
               flex-1 flex flex-col items-center justify-center gap-1
               bg-gradient-to-br from-royal-600 to-royal-800
@@ -81,9 +82,6 @@ export function MobileBottomBar() {
             <span className="text-xs font-bold tracking-wide leading-none">
               Call Now
             </span>
-            <span className="text-[10px] text-blue-100 font-medium leading-none hidden xs:block">
-              {BUSINESS.phone}
-            </span>
           </motion.a>
 
           {/* ── Divider ── */}
@@ -95,6 +93,7 @@ export function MobileBottomBar() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Message us on WhatsApp"
+            style={{ touchAction: 'manipulation' }}
             className="
               flex-1 flex flex-col items-center justify-center gap-1
               bg-gradient-to-br from-green-500 to-green-700
@@ -122,9 +121,6 @@ export function MobileBottomBar() {
 
             <span className="text-xs font-bold tracking-wide leading-none">
               WhatsApp
-            </span>
-            <span className="text-[10px] text-green-100 font-medium leading-none hidden xs:block">
-              Chat with us
             </span>
           </motion.a>
 

@@ -216,7 +216,7 @@ function ServiceCard({
     >
       <Link href={`/services/${service.slug}`} className="block h-full">
         <div className={cn(
-          'h-full flex flex-col p-5 md:p-6 rounded-2xl border transition-all duration-300',
+          'h-full min-h-[160px] flex flex-col p-5 md:p-6 rounded-2xl border transition-all duration-300',
           'bg-white dark:bg-navy-800',
           service.border,
           'hover:shadow-xl hover:border-transparent',
@@ -249,7 +249,7 @@ function ServiceCard({
           </p>
 
           {/* Learn More link */}
-          <div className="mt-4 flex items-center gap-1.5 text-royal-600 dark:text-royal-400 text-sm font-semibold group-hover:gap-2.5 transition-all duration-200">
+          <div className="mt-4 min-h-[44px] flex items-center gap-1.5 text-royal-600 dark:text-royal-400 text-sm font-semibold group-hover:gap-2.5 transition-all duration-200">
             Learn More
             <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
           </div>
@@ -309,22 +309,26 @@ export function ServicesGrid() {
           initial={{ opacity: 0, y: 16 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
           transition={{ duration: 0.5, delay: 0.15 }}
-          className="flex flex-wrap gap-2 justify-center mb-8 md:mb-10"
+          className="mb-8 md:mb-10"
         >
-          {FILTER_TABS.map((tab) => (
-            <button
-              key={tab.key}
-              onClick={() => { setActiveFilter(tab.key); setShowAll(false); }}
-              className={cn(
-                'px-4 py-2 rounded-full text-sm font-semibold transition-all duration-200',
-                activeFilter === tab.key
-                  ? 'bg-royal-600 text-white shadow-lg shadow-royal-600/25'
-                  : 'bg-white dark:bg-navy-800 text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-white/10 hover:border-royal-300 hover:text-royal-600'
-              )}
-            >
-              {tab.label}
-            </button>
-          ))}
+          <div className="overflow-x-auto scrollbar-hide -mx-4 px-4 pb-2">
+            <div className="flex flex-nowrap gap-2 justify-start sm:justify-center min-w-max sm:min-w-0">
+              {FILTER_TABS.map((tab) => (
+                <button
+                  key={tab.key}
+                  onClick={() => { setActiveFilter(tab.key); setShowAll(false); }}
+                  className={cn(
+                    'px-4 py-2 rounded-full text-sm font-semibold transition-all duration-200 whitespace-nowrap',
+                    activeFilter === tab.key
+                      ? 'bg-royal-600 text-white shadow-lg shadow-royal-600/25'
+                      : 'bg-white dark:bg-navy-800 text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-white/10 hover:border-royal-300 hover:text-royal-600'
+                  )}
+                >
+                  {tab.label}
+                </button>
+              ))}
+            </div>
+          </div>
         </motion.div>
 
         {/* Grid */}

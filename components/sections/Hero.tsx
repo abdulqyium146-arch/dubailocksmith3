@@ -241,7 +241,7 @@ export function Hero() {
       {/* Main content */}
       <motion.div
         style={{ y: contentY }}
-        className="relative z-10 container-premium w-full pt-28 pb-16 md:pt-32 md:pb-20"
+        className="relative z-10 container-premium w-full pt-28 pb-28 md:pt-32 md:pb-20"
       >
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
@@ -284,11 +284,11 @@ export function Hero() {
 
             {/* Trust badges */}
             <motion.div variants={itemVariants}>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-1.5 sm:gap-2">
                 {trustBadges.map(({ icon: Icon, text, color }) => (
                   <span
                     key={text}
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/8 border border-white/12 text-white/80 text-xs font-medium backdrop-blur-sm"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/8 border border-white/12 text-white/80 text-[11px] sm:text-xs font-medium backdrop-blur-sm"
                   >
                     <Icon className={cn('w-3.5 h-3.5', color)} />
                     {text}
@@ -304,10 +304,11 @@ export function Hero() {
                 href={`tel:${BUSINESS.phoneRaw}`}
                 whileHover={{ scale: 1.04, y: -2 }}
                 whileTap={{ scale: 0.97 }}
-                className="btn btn-emergency text-base px-6 py-4 flex-1 sm:flex-none justify-center"
+                className="btn btn-emergency text-sm sm:text-base px-4 sm:px-6 py-4 w-full sm:flex-none justify-center"
               >
-                <Phone className="w-5 h-5" />
-                Call Now: {BUSINESS.phone}
+                <Phone className="w-5 h-5 shrink-0" />
+                <span className="sm:hidden">Call Now</span>
+                <span className="hidden sm:inline">Call Now: {BUSINESS.phone}</span>
               </motion.a>
 
               {/* WhatsApp */}

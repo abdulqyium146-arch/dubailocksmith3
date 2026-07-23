@@ -245,7 +245,7 @@ function MobileDrawer({
               <button
                 onClick={onClose}
                 aria-label="Close menu"
-                className="w-9 h-9 rounded-lg flex items-center justify-center text-gray-500 hover:bg-gray-100 dark:hover:bg-white/10 transition-colors"
+                className="min-w-[44px] min-h-[44px] rounded-lg flex items-center justify-center text-gray-500 hover:bg-gray-100 dark:hover:bg-white/10 transition-colors"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -264,7 +264,7 @@ function MobileDrawer({
             </div>
 
             {/* Nav Links */}
-            <nav className="flex-1 overflow-y-auto px-3 py-4 space-y-1">
+            <nav className="flex-1 overflow-y-auto overscroll-contain max-h-[calc(100vh-4rem)] px-3 py-4 space-y-1">
               {/* Home */}
               <Link
                 href="/"
@@ -743,7 +743,7 @@ export function Navbar() {
                 aria-label="Open navigation menu"
                 aria-expanded={isMobileOpen}
                 className={cn(
-                  'w-9 h-9 rounded-lg flex items-center justify-center transition-colors',
+                  'min-w-[44px] min-h-[44px] rounded-lg flex items-center justify-center transition-colors',
                   isScrolled
                     ? 'text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-white/10'
                     : 'text-white hover:bg-white/10'

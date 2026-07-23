@@ -851,3 +851,122 @@ img {
     color: black;
   }
 }
+
+/* ─────────────────────────────────────────────
+   MOBILE OPTIMIZATION
+───────────────────────────────────────────── */
+
+/* Prevent content shift from scrollbar on desktop */
+html {
+  scrollbar-gutter: stable;
+}
+
+/* Touch optimization — removes 300ms delay on mobile browsers */
+a, button, [role="button"] {
+  touch-action: manipulation;
+}
+
+/* Prevent double-tap zoom on interactive elements */
+button, a, input, select, textarea {
+  touch-action: manipulation;
+}
+
+/* Minimum tap target size (WCAG 2.2 — 44x44px) */
+.tap-target {
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobile bottom safe area — use on sections that come before the bottom bar */
+.pb-mobile-bar {
+  padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px));
+}
+
+/* Scroll padding to account for sticky navbar + emergency banner */
+html {
+  scroll-padding-top: 80px;
+}
+
+/* Prevent text overflow on very small screens */
+.break-words-mobile {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Hide horizontal scroll on body */
+body {
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Smooth scroll on iOS */
+.scroll-smooth-ios {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+/* Better form inputs on mobile */
+input, select, textarea {
+  font-size: 16px; /* Prevents iOS zoom on focus */
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* ─── Reduced Motion ─── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ─── High contrast mode ─── */
+@media (forced-colors: active) {
+  .btn-primary, .btn-emergency, .btn-whatsapp {
+    border: 2px solid ButtonText;
+  }
+}
+
+/* ─── Mobile typography scale ─── */
+@media (max-width: 390px) {
+  .text-responsive-xl {
+    font-size: 1.75rem;
+    line-height: 1.2;
+  }
+
+  .text-responsive-2xl {
+    font-size: 2rem;
+    line-height: 1.15;
+  }
+}
+
+/* ─── Mobile button full-width helper ─── */
+@media (max-width: 640px) {
+  .btn-mobile-full {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ─── Improved mobile cards ─── */
+@media (max-width: 640px) {
+  .card-premium {
+    border-radius: 1rem;
+  }
+}
+
+/* ─── Mobile hero padding (accounts for EmergencyBanner + Navbar) ─── */
+.hero-mobile-pt {
+  padding-top: 7rem; /* default for mobile */
+}
+
+@media (min-width: 768px) {
+  .hero-mobile-pt {
+    padding-top: 8rem;
+  }
+}

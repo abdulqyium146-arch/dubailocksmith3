@@ -102,8 +102,8 @@ export function EmergencyBanner() {
                   aria-label={`Call emergency locksmith: ${BUSINESS.phone}`}
                 >
                   <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
-                  <span className="hidden xs:inline">{BUSINESS.phone}</span>
-                  <span className="inline xs:hidden">Call</span>
+                  <span className="hidden sm:inline text-sm sm:text-base">{BUSINESS.phone}</span>
+                  <span className="inline sm:hidden">Call</span>
                 </motion.a>
 
                 {/* WhatsApp CTA */}
@@ -126,7 +126,7 @@ export function EmergencyBanner() {
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                   aria-label="Dismiss emergency banner"
-                  className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/15 hover:bg-white/25 flex items-center justify-center transition-colors ml-1"
+                  className="min-w-[44px] min-h-[44px] rounded-full bg-white/15 hover:bg-white/25 flex items-center justify-center transition-colors ml-1"
                 >
                   <X className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
                 </motion.button>

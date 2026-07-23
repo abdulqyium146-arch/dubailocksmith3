@@ -168,13 +168,13 @@ export function Footer() {
       </div>
 
       {/* ── Main Footer Content ── */}
-      <div className="container-premium py-16 relative z-10">
+      <div className="container-premium py-16 pb-24 md:pb-16 relative z-10">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-80px' }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
         >
 
           {/* ── Column 1: Brand ── */}
@@ -207,7 +207,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Locksmith In Dubai on Facebook"
-                className="w-9 h-9 bg-white/10 hover:bg-royal-600 border border-white/10 hover:border-royal-600 rounded-lg flex items-center justify-center text-white/60 hover:text-white transition-all duration-200"
+                className="min-w-[44px] min-h-[44px] bg-white/10 hover:bg-royal-600 border border-white/10 hover:border-royal-600 rounded-lg flex items-center justify-center text-white/60 hover:text-white transition-all duration-200"
               >
                 <Facebook className="w-4 h-4" />
               </a>
@@ -216,7 +216,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Locksmith In Dubai on Instagram"
-                className="w-9 h-9 bg-white/10 hover:bg-pink-600 border border-white/10 hover:border-pink-600 rounded-lg flex items-center justify-center text-white/60 hover:text-white transition-all duration-200"
+                className="min-w-[44px] min-h-[44px] bg-white/10 hover:bg-pink-600 border border-white/10 hover:border-pink-600 rounded-lg flex items-center justify-center text-white/60 hover:text-white transition-all duration-200"
               >
                 <Instagram className="w-4 h-4" />
               </a>
@@ -225,7 +225,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Locksmith In Dubai on Twitter"
-                className="w-9 h-9 bg-white/10 hover:bg-sky-500 border border-white/10 hover:border-sky-500 rounded-lg flex items-center justify-center text-white/60 hover:text-white transition-all duration-200"
+                className="min-w-[44px] min-h-[44px] bg-white/10 hover:bg-sky-500 border border-white/10 hover:border-sky-500 rounded-lg flex items-center justify-center text-white/60 hover:text-white transition-all duration-200"
               >
                 <Twitter className="w-4 h-4" />
               </a>
@@ -234,7 +234,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Locksmith In Dubai on Google Maps"
-                className="w-9 h-9 bg-white/10 hover:bg-red-500 border border-white/10 hover:border-red-500 rounded-lg flex items-center justify-center text-white/60 hover:text-white transition-all duration-200"
+                className="min-w-[44px] min-h-[44px] bg-white/10 hover:bg-red-500 border border-white/10 hover:border-red-500 rounded-lg flex items-center justify-center text-white/60 hover:text-white transition-all duration-200"
               >
                 <MapPin className="w-4 h-4" />
               </a>
